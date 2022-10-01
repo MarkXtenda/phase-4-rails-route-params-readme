@@ -15,6 +15,8 @@ gem 'puma', '~> 5.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
+  gem 'psych', '< 4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -35,3 +37,11 @@ group :test do
   gem 'rspec-json_expectations'
   gem 'shoulda-matchers', '~> 4.0'
 end
+
+# module YAML
+#   def self.properly_load_file(path)
+#     YAML.load_file path, aliases: true
+#   rescue ArgumentError
+#     YAML.load_file path
+#   end
+# end
